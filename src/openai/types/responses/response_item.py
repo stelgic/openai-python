@@ -18,6 +18,7 @@ from .response_apply_patch_tool_call_output import ResponseApplyPatchToolCallOut
 from .response_computer_tool_call_output_item import ResponseComputerToolCallOutputItem
 from .response_function_tool_call_output_item import ResponseFunctionToolCallOutputItem
 from .response_function_shell_tool_call_output import ResponseFunctionShellToolCallOutput
+from .response_output_extra_content import ResponseOutputExtraContent
 
 __all__ = [
     "ResponseItem",
@@ -203,6 +204,7 @@ ResponseItem: TypeAlias = Annotated[
     Union[
         ResponseInputMessageItem,
         ResponseOutputMessage,
+        ResponseOutputExtraContent,
         ResponseFileSearchToolCall,
         ResponseComputerToolCall,
         ResponseComputerToolCallOutputItem,

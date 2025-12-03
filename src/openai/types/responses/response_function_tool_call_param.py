@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from typing import Optional, Dict
 from typing_extensions import Literal, Required, TypedDict
 
 __all__ = ["ResponseFunctionToolCallParam"]
@@ -29,3 +30,6 @@ class ResponseFunctionToolCallParam(TypedDict, total=False):
     One of `in_progress`, `completed`, or `incomplete`. Populated when items are
     returned via API.
     """
+
+    extra_content: Optional[Dict[str, object]]
+    """The extra content such as though_signature from gemini 3"""
