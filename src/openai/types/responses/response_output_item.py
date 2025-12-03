@@ -17,7 +17,6 @@ from .response_function_shell_tool_call import ResponseFunctionShellToolCall
 from .response_code_interpreter_tool_call import ResponseCodeInterpreterToolCall
 from .response_apply_patch_tool_call_output import ResponseApplyPatchToolCallOutput
 from .response_function_shell_tool_call_output import ResponseFunctionShellToolCallOutput
-from .response_output_extra_content import ResponseOutputExtraContent
 
 __all__ = [
     "ResponseOutputItem",
@@ -169,7 +168,6 @@ class McpApprovalRequest(BaseModel):
 ResponseOutputItem: TypeAlias = Annotated[
     Union[
         ResponseOutputMessage,
-        ResponseOutputExtraContent,
         ResponseFileSearchToolCall,
         ResponseFunctionToolCall,
         ResponseFunctionWebSearch,
