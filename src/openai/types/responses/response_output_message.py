@@ -7,11 +7,10 @@ from ..._utils import PropertyInfo
 from ..._models import BaseModel
 from .response_output_text import ResponseOutputText
 from .response_output_refusal import ResponseOutputRefusal
-from .response_output_extra_content import ResponseOutputExtraContent
 
 __all__ = ["ResponseOutputMessage", "Content"]
 
-Content: TypeAlias = Annotated[Union[ResponseOutputText, ResponseOutputRefusal, ResponseOutputExtraContent], PropertyInfo(discriminator="type")]
+Content: TypeAlias = Annotated[Union[ResponseOutputText, ResponseOutputRefusal], PropertyInfo(discriminator="type")]
 
 
 class ResponseOutputMessage(BaseModel):
