@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from typing import Optional, Dict
 from typing_extensions import Literal, Required, TypedDict
 
 __all__ = ["ChatCompletionMessageFunctionToolCallParam", "Function"]
@@ -29,3 +30,6 @@ class ChatCompletionMessageFunctionToolCallParam(TypedDict, total=False):
 
     type: Required[Literal["function"]]
     """The type of the tool. Currently, only `function` is supported."""
+
+    extra_content: Optional[Dict[str, object]]
+    """The extra content such as though_signature from gemini 3"""

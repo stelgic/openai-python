@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-
+from typing import Optional, Dict
 from typing_extensions import Literal
 
 from ..._models import BaseModel
@@ -29,3 +29,6 @@ class ChatCompletionMessageFunctionToolCall(BaseModel):
 
     type: Literal["function"]
     """The type of the tool. Currently, only `function` is supported."""
+
+    extra_content: Optional[Dict[str, object]]
+    """The extra content such as though_signature from gemini 3"""
