@@ -30,5 +30,5 @@ class ChatCompletionMessageFunctionToolCall(BaseModel):
     type: Literal["function"]
     """The type of the tool. Currently, only `function` is supported."""
 
-    extra_content: Optional[Dict[str, object]]
+    extra_content: Optional[Dict[str, object]] = {}
     """The extra content such as though_signature from gemini 3"""
